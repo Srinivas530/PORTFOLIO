@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  
+{% load static %}
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  /* Keep background light using Bootstrap's bg-light */
+  body, .bg-light {
+    background-color: #f8f9fa !important;
+    color: #000 !important;
+  }
+
+  /* Make sure all text stays dark */
+  .text-dark {
+    color: #000 !important;
+  }
+
+  /* Make navbar text dark (overriding .navbar-dark default white) */
+  .navbar-bg-light .navbar-nav .nav-link {
+    background-color: #f8f9fa !important;
+    color: #000 !important;
+  }
+
+  /* Highlight active link in navbar */
+  .navbar-light .navbar-nav .nav-link.active {
+    color: #f1b600 !important;
+    font-weight: bold;
+  }
+
+  /* Footer background and text */
+  footer.bg-dark {
+    background-color: #f8f9fa !important;
+    color: #000 !important;
+  }
+
+  footer.bg-dark a {
+    color: #000 !important;
+  }
+
+  footer.bg-dark a:hover {
+    color: #f44336 !important;
+  }
+
+   footer {
+    border-top: 2px solid #dee2e6; /* Light gray line for separation */
+  }
+  footer {
+  border-top: 2px solid #dee2e6;
+  margin-top: 2rem; /* pushes the footer down */
+}
+</style>
+<style>
+    .project-card {
+      min-height: 350px; /* You can increase or decrease as needed */
+    }
+  </style>
+
+
+
+
+
+
+
+  <!-- Bootstrap JS (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+
+<body>
+    {% load static %}
+    <div class="bg-light text-dark" >
+
+
+  <div class="container-fluid p-0 ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     
+      <a class="navbar-brand px-3 " href="/"> SRINIVAS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item px-3">
+            <a class="nav-link " href="/">Home</a>
+          </li>
+          
+        </ul>
+        <ul class="navbar-nav ms-auto px-4 d-flex align-items-center gap-3">
+  <li class="nav-item">
+    <a class="nav-link a" href="/Education">Education</a>
+  </li>
+  <li class="text-dark">|</li>
+  <li class="nav-item">
+    <a class="nav-link active" href="/Projects">Projects</a>
+  </li>
+  <li class="text-dark">|</li>
+  <li class="nav-item">
+    <a class="nav-link" href="/contact">Contact</a>
+  </li>
+</ul>
+
+      </div>
+    </nav>
+  </div>
+  <div class="container py-5">
+  <h2 class="text-center mb-4">My Projects</h2>
+  <div class="row g-4">
+
+    <!-- Project Card 1 -->
+     <div class="col-md-6 col-lg-6">
+  <div class="card h-100 shadow-sm border-0 d-flex flex-column project-card">
+    
+    <!-- Title always at top -->
+    <div class="card-body bg-light pb-0">
+      <h5 class="card-title text-primary text-center">Huffman Compressor</h5>
+    </div>
+    
+    <!-- Description centered in middle -->
+    <div class="card-body bg-light pt-1 flex-grow-1 d-flex flex-column">
+      <p class="card-text text-muted text-center">
+  
+  <ul><li>  Implements Huffman coding algorithm in C++ for file compression and decompression.<br></li>
+  <li> Supports bit-level encoding for efficient storage.<br></li>
+  <li> Includes decompression functionality with accurate file recovery.<br></li>
+  <li> Connected to a Python Streamlit frontend using <strong>Subprocess</strong>for seamless integration.<br></li>
+<li>Displays  original vs compressed size, compression ratio,and time taken to implement.</li></ul>
+  
+  
+  
+</p>
+
+    </div>
+
+    <!-- Footer with buttons -->
+    <div class="card-footer bg-transparent d-flex justify-content-between">
+      <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
+      <a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+    </div>
+  </div>
+</div>
+
+    <!-- Project Card 2 -->
+   <div class="col-md-6 col-lg-6">
+  <div class="card h-100 shadow-sm border-0 d-flex flex-column project-card">
+    
+    <!-- Title always at top -->
+    <div class="card-body bg-light pb-0">
+      <h5 class="card-title text-primary text-center">Algorithm Visualizer</h5>
+    </div>
+    
+    <!-- Description centered in middle -->
+    <div class="card-body bg-light pt-1 flex-grow-1 d-flex flex-column">
+      <strong>Sorting Visualizer:</strong><br>
+  • Visualizes sorting algorithms: Bubble Sort, Merge Sort, Quick Sort, Selection Sort, and Insertion Sort.<br>
+  • Demonstrates how each algorithm operates on a randomly generated array.<br><br>
+
+  <strong>Pathfinding Visualizer:</strong><br>
+  • Simulates algorithms like Dijkstra’s, BFS, and DFS.<br>
+  • Shows how they find the shortest path between two points on a grid.
+</p>
+    </div>
+
+    <!-- Footer with buttons -->
+    <div class="card-footer bg-transparent d-flex justify-content-between">
+      <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
+      <a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+    </div>
+  </div>
+</div>
+
+    <!-- Project Card 3 -->
+     <div class="col-md-6 col-lg-6">
+  <div class="card h-100 shadow-sm border-0 d-flex flex-column project-card">
+    
+    <!-- Title always at top -->
+    <div class="card-body bg-light pb-0">
+      <h5 class="card-title text-primary text-center">Banglore house price prediction </h5>
+    </div>
+    
+    <!-- Description centered in middle -->
+    <div class="card-body bg-light pt-1 flex-grow-1 d-flex flex-column">
+      <p class="card-text text-muted text-center">
+        <ul>
+  <li>Performed advanced data cleaning — handled inconsistent square footage and outliers on the kaggle dataset.<br></li>
+  <li>Used GridSearchCV to optimize and select the most accurate ML model for price prediction.</li>
+<li>Trained on <strong>13,000+</strong> rows of real estate data with features like location, BHK, sqft, bath, and price.<br></li>
+<li>Achieved test accuracy of over <strong>82%</strong> and minimized mean squared error.<br></li>
+<li>Deployed the model with an interactive web interface for real-time Bangalore house price predictions.</li></ul>
+</p>
+
+    </div>
+
+    <!-- Footer with buttons -->
+    <div class="card-footer bg-transparent d-flex justify-content-between">
+      <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
+      <a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+    </div>
+  </div>
+</div>
+     <div class="col-md-6 col-lg-6">
+  <div class="card h-100 shadow-sm border-0 d-flex flex-column project-card">
+    
+    <!-- Title always at top -->
+    <div class="card-body bg-light pb-0">
+      <h5 class="card-title text-primary text-center">Next Word-Predictor</h5>
+    </div>
+    
+    <!-- Description centered in middle -->
+    <div class="card-body bg-light pt-1 flex-grow-1 d-flex flex-column">
+      <p class="card-text text-muted text-center">
+       <ul><li>Developed a next-word prediction model using <b>LSTM neural networks</b> for contextual text suggestions.</li>
+
+<li>Implemented  <b>NLP</b> preprocessing including <b>tokenization</b>, <b>padding</b>, and <b>sequence generation</b> for training.</li>
+
+<li>Trained the model on large text corpora to improve accuracy in predicting subsequent words.</li>
+
+<li>Integrated the model into a user interface for real-time next-word suggestions during typing.</li>
+
+<!--<li>Optimized model performance by tuning hyperparameters and reducing latency for faster predictions.</li>--></ul>
+      </p>
+    </div>
+
+    <!-- Footer with buttons -->
+    <div class="card-footer bg-transparent d-flex justify-content-between">
+      <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
+      <a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+    </div>
+  </div>
+</div>
+    
+
+
+  </div>
+</div>
+
+  <footer class="bg-light text-dark pt-4">
+  <div class="container py-4">
+    <div class="row text-center text-md-start">
+      
+      <!-- Phone -->
+      <div class="col-6 col-md-3 mb-3">
+       
+        <a href="tel:+918639067644" class="text-decoration-none text-dark"> <h6 class="fw-bold"><i class="bi bi-telephone-fill me-2"></i>Phone</h6></a>
+      </div>
+
+      <!-- Email -->
+      <div class="col-6 col-md-3 mb-3">
+        
+        <a href="mailto:srinivas.pilla.961@gmail.com" class="text-decoration-none text-dark"><h6 class="fw-bold"><i class="bi bi-envelope-fill me-2"></i>Email</h6></a>
+       
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="col-6 col-md-3 mb-3">
+     
+        <a href="https://linkedin.com/in/Pilla-srinivas" class="text-decoration-none text-dark" target="_blank">
+             <h6 class="fw-bold"><i class="bi bi-linkedin me-2"></i>LinkedIn</h6>
+        </a>
+      </div>
+
+      <!-- GitHub -->
+      <div class="col-6 col-md-3 mb-3">
+        
+        <a href="https://github.com/Srinivas530" class="text-decoration-none text-dark" target="_blank">
+          <h6 class="fw-bold"><i class="bi bi-github me-2"></i>GitHub</h6>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>
